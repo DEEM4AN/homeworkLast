@@ -1,16 +1,16 @@
 ﻿class Task { 
     public static void Main(string[] args) {
-        string[] arrayString = ["hello", "run", "12313", "hi", "444", "jerry", "how", "228"];
-        string buffString = "";
-        char delimiterChar = '*';
-        for (int i = 0; i < arrayString.Length; i++)
+        string[] arrayInitial = ["hello", "run", "12313", "hi", "444", "jerry", "how", "228"];
+        string bufferString = "";
+        string delimiterString = "*<><>*";
+        for (int i = 0; i < arrayInitial.Length; i++)
         {
-            if(arrayString[i].Length <= 3) {
-                buffString = (buffString + arrayString[i] + delimiterChar);
+            if(arrayInitial[i].Length <= 3) {
+                bufferString = (bufferString + arrayInitial[i] + delimiterString);
             }
         }
-        string[] arrayWithThreeSymbols = buffString.Split(delimiterChar);
-        foreach (string item in arrayWithThreeSymbols)
+        string[] threeLetterWordsArray = bufferString.Split(delimiterString);
+        foreach (string item in threeLetterWordsArray)
         {
             Console.WriteLine(item + " ");
         }
